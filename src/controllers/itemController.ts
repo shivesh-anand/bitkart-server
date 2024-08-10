@@ -271,6 +271,7 @@ export const getItems = async (req: Request, res: Response) => {
 
     res.json(transformedItems);
   } catch (error) {
+    console.log(error);
     res.status(500).json({ message: "Server error", error });
   }
 };
@@ -352,6 +353,7 @@ export const updateItem = async (req: Request, res: Response) => {
     await item.save();
     res.json(item);
   } catch (error) {
+    console.log(error);
     res.status(500).json({ message: "Server error", error });
   }
 };
@@ -429,6 +431,7 @@ export const deleteItem = async (req: Request, res: Response) => {
 
     res.json({ message: "Item deleted successfully" });
   } catch (error) {
+    console.log(error);
     res.status(500).json({ message: "Server error", error });
   }
 };
@@ -491,6 +494,7 @@ export const updateImages = async (req: Request, res: Response) => {
 
     res.json({ message: "Images updated successfully", item });
   } catch (error) {
+    console.log(error);
     res.status(500).json({ message: "Server error", error });
   }
 };
@@ -579,6 +583,7 @@ export const deleteImage = async (req: Request, res: Response) => {
 
     res.json({ message: "Image deleted successfully", item });
   } catch (error) {
+    console.log(error);
     res.status(500).json({ message: "Server error", error });
   }
 };
