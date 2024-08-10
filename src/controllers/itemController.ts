@@ -29,14 +29,14 @@ const transformRegion = process.env.AWS_TRANSFORM_BUCKET_REGION;
 const transformAccessKeyId = process.env.AWS_TRANSFORM_ACCESS_KEY_ID;
 const transformSecretAccessKey = process.env.AWS_TRANSFORM_SECRET_ACCESS_KEY;
 
-// console.log("bucketName:", bucketName);
-// console.log("region:", region);
-// console.log("accessKeyId:", accessKeyId);
-// console.log("secretAccessKey:", secretAccessKey);
-// console.log("transformBucketName:", transformBucketName);
-// console.log("transformRegion:", transformRegion);
-// console.log("transformAccessKeyId:", transformAccessKeyId);
-// console.log("transformSecretAccessKey:", transformSecretAccessKey);
+console.log("bucketName:", bucketName);
+console.log("region:", region);
+console.log("accessKeyId:", accessKeyId);
+console.log("secretAccessKey:", secretAccessKey);
+console.log("transformBucketName:", transformBucketName);
+console.log("transformRegion:", transformRegion);
+console.log("transformAccessKeyId:", transformAccessKeyId);
+console.log("transformSecretAccessKey:", transformSecretAccessKey);
 
 interface ImageDetail {
   url: string;
