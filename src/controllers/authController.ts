@@ -76,6 +76,7 @@ export const verifyOtpController = async (req: Request, res: Response) => {
         .cookie("token", token, {
           httpOnly: true,
           secure: process.env.NODE_ENV === "production",
+          sameSite: "none",
         })
         .status(200)
         .json({
@@ -148,6 +149,7 @@ export const loginController = async (req: Request, res: Response) => {
       .cookie("token", token, {
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
+        sameSite: "none",
       })
       .status(200)
       .json({
