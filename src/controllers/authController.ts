@@ -77,7 +77,7 @@ export const verifyOtpController = async (req: Request, res: Response) => {
           httpOnly: true,
           secure: true,
           sameSite: "none",
-          domain: "king-prawn-app-amyex.ondigitalocean.app",
+          domain: "bitkart-client.vercel.app",
         })
         .status(200)
         .json({
@@ -151,7 +151,7 @@ export const loginController = async (req: Request, res: Response) => {
         httpOnly: true,
         secure: true,
         sameSite: "none",
-        domain: "king-prawn-app-amyex.ondigitalocean.app",
+        domain: "bitkart-client.vercel.app",
       })
       .status(200)
       .json({
