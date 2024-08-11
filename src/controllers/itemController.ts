@@ -18,14 +18,14 @@ import {
 } from "@aws-sdk/client-cloudfront";
 
 const bucketName = process.env.AWS_BUCKET_NAME;
-const region = process.env.AWS_BUCKET_REGION;
+const region = process.env.AWS_BUCKET_REGION || "ap-south-1";
 const accessKeyId = process.env.AWS_ACCESS_KEY_ID;
 const secretAccessKey = process.env.AWS_SECRET_ACCESS_KEY;
 const cloudfrontDomain = process.env.CLOUDFRONT_DOMAIN;
 const cloudFrontDistID = process.env.CLOUDFRONT_DIST_ID;
 
 const transformBucketName = process.env.AWS_TRANSFORM_BUCKET_NAME;
-const transformRegion = process.env.AWS_TRANSFORM_BUCKET_REGION;
+const transformRegion = process.env.AWS_TRANSFORM_BUCKET_REGION || "ap-south-1";
 const transformAccessKeyId = process.env.AWS_TRANSFORM_ACCESS_KEY_ID;
 const transformSecretAccessKey = process.env.AWS_TRANSFORM_SECRET_ACCESS_KEY;
 
