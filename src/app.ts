@@ -12,11 +12,18 @@ import itemRoutes from "./routes/itemRoutes.js";
 import messageRoutes from "./routes/messageRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 import { connectDB } from "./utils/connectDB.js";
+import AWS from "aws-sdk";
 
 dotenv.config();
 
 const app = express();
 app.set("trust proxy", 1);
+
+AWS.config.update({
+  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+  region: process.env.AWS_REGION,
+});
 
 // Security middleware
 app.use(helmet());
