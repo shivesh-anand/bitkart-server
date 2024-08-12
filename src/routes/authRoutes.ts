@@ -48,6 +48,7 @@ router.get(
       secure: process.env.NODE_ENV === "production",
       domain: ".king-prawn-app-amyex.ondigitalocean.app",
       path: "/",
+      sameSite: "none",
     });
 
     const redirectUrl = `${process.env.FRONTEND_URL}/google-auth?token=${token}&firstName=${firstName}&lastName=${lastName}&email=${email}&_id=${_id}&googleId=${googleId}`;
