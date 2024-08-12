@@ -45,8 +45,8 @@ router.get(
 
     res.cookie("token", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      domain: ".king-prawn-app-amyex.ondigitalocean.app",
+      secure: true,
+      domain: process.env.DOMAIN,
       path: "/",
       sameSite: "none",
     });
