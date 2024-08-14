@@ -53,8 +53,8 @@ export const registerController = async (req: Request, res: Response) => {
 export const verifyOtpController = async (req: Request, res: Response) => {
   const userId = req.params.id;
   const { otp } = req.body;
-  console.log("User ID:", userId);
-  console.log("OTP:", otp);
+  //console.log("User ID:", userId);
+  //console.log("OTP:", otp);
 
   try {
     const isValid = await validateOTP(userId, otp);
